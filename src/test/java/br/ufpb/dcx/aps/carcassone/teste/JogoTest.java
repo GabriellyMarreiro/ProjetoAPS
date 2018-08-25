@@ -593,17 +593,17 @@ public class JogoTest {
 	}
 
 	private void verificarRelatorioPartida(Partida partida, String status, String sequencia) {
-		String relatorio = partida.relatorioPartida();
+		String relatorio = partida.relatorioPartida(status, sequencia);
 		Assert.assertEquals("Status: " + status + "\nJogadores: " + sequencia, relatorio);
 	}
 
 	private void verificarRelatorioTurno(Partida partida, String jogador, String tile, String status) {
-		String relatorio = partida.relatorioTurno();
+		String relatorio = partida.relatorioTurno(jogador, tile, status);
 		Assert.assertEquals("Jogador: " + jogador + "\nTile: " + tile + "\nStatus: " + status, relatorio);
 	}
 
 	private void verificarRelatorioTabuleiro(Partida partida, String configuracao) {
-		Assert.assertEquals(configuracao, partida.relatorioTabuleiro());
+		Assert.assertEquals(configuracao, partida.relatorioTabuleiro(configuracao));
 	}
 
 }

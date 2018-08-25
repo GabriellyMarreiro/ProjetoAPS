@@ -14,8 +14,12 @@ public class Partida {
 		pegarProximoTile();
 	}
 
-	public String relatorioPartida() {
-		return null;
+	public String relatorioPartida(String status, String sequencia) {
+		return "Status: " + status + "\nJogadores: " + sequencia;
+	}
+	
+	public String relatorioTurno(String jogador, String tile, String status) {
+		return "Jogador: " + jogador + "\nTile: " + tile + "\nStatus: " + status;
 	}
 
 	public String relatorioTurno() {
@@ -74,7 +78,7 @@ public class Partida {
 		return null;
 	}
 
-	public String relatorioTabuleiro() {
-		return null;
+	public String relatorioTabuleiro(String configuracao) {
+		return configuracao;
 	}
 }
